@@ -1,0 +1,150 @@
+/* تنظیمات کلی و ریست کردن استایل‌ها */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tahoma', 'Segoe UI', sans-serif; /* فونت ساده و خوانا */
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* استایل هدر */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* کانتینر اصلی */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    /* گرید ریسپانسیو: در موبایل ۱ ستون، دسکتاپ تا ۴ ستون */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* استایل کارت‌های برنامه */
+.app-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1e1e1;
+}
+
+/* افکت هاور (زمانی که موس روی کارت می‌رود) */
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* استایل آیکون‌ها */
+.app-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #764ba2;
+}
+
+/* استایل خاص برای آیکون یوتیوب */
+.app-card.special .icon {
+    color: #ff0000;
+}
+
+.app-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.app-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* استایل دکمه دانلود */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #667eea;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #5a6fd6;
+}
+
+/* استایل فوتر */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* ... (کدهای CSS قبلی) ... */
+
+/* استایل کانتینر ویدیو (مخفی بودن پیش‌فرض) */
+.video-container {
+    position: relative; /* برای positioning absolute ویدیو */
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* نسبت ابعاد 16:9 برای ویدیو */
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none; /* پیش‌فرض مخفی */
+    transition: all 0.3s ease-in-out;
+}
+
+.video-container.show {
+    display: block; /* نمایش ویدیو هنگام هاور */
+}
+
+.preview-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* پر کردن کانتینر */
+    border-radius: 8px;
+}
+
+/* برای اینکه آیکون و ویدیو با هم فضای مناسبی داشته باشند */
+.app-card .icon {
+    font-size: 3rem;
+    margin-bottom: 5px; /* کمی کمتر شده */
+    color: #764ba2;
+    cursor: pointer; /* نشانگر ماوس برای جذابیت */
+}
+
+.app-card h3 {
+    margin-bottom: 5px; /* کمی کمتر شده */
+}
+
+/* ... (ادامه کدهای CSS قبلی) ... */
